@@ -1,26 +1,32 @@
 {
-  "name": "@wa-os/ts-rpc-vue",
+  "name": "@daemonarium/rpc-vue",
   "version": "0.1.0",
-  "description": "Vue bindings for @wa-os/ts-rpc observables",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
+  "description": "Vue bindings for @daemonarium/rpc observables",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "author": "Magowie Sp. z o.o.",
+  "license": "MIT",
   "type": "module",
+  "files": ["dist", "README.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "test": "node --require ./tests/register.cjs ../node_modules/mocha/bin/mocha.js --timeout 10000 'tests/**/*.test.ts'"
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node --require ./tests/register.cjs ./node_modules/mocha/bin/mocha.js --timeout 10000 'tests/**/*.test.ts'"
   },
   "peerDependencies": {
     "vue": "^3.5.0",
-    "@wa-os/ts-rpc": "0.1.0"
-  },
-  "dependencies": {
-    "@wa-os/ts-rpc": "0.1.0"
+    "@daemonarium/rpc": "^0.1.0"
   },
   "devDependencies": {
+    "@daemonarium/rpc": "0.1.0",
+    "@happy-dom/global-registrator": "^20.0.11",
     "@types/chai": "^4.3.11",
     "@types/mocha": "^10.0.0",
     "@vue/test-utils": "^2.4.6",
     "chai": "^4.3.10",
-    "@happy-dom/global-registrator": "^20.0.11",
     "happy-dom": "^20.0.11",
     "mocha": "^10.2.0",
     "tsx": "^4.7.0",

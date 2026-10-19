@@ -8,7 +8,7 @@ import {
   ObservableState,
   decodeObservable,
   type BinaryEntry,
-} from '@wa-os/ts-rpc'
+} from '@daemonarium/rpc'
 import { useObservable } from '../src/index.js'
 
 const enc = new TextEncoder()

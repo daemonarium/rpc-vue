@@ -18,7 +18,7 @@ import {
   type DecodedObservable,
   type DecodedOutput,
   type ObservableState,
-} from '@wa-os/ts-rpc'
+} from '@daemonarium/rpc'
 
 export interface UseObservableOptions {
   flush?: 'raf' | 'microtask' | 'sync'  // default 'raf'
